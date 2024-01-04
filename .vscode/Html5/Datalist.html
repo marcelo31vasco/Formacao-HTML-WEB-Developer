@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta nome="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Recursos especiais</title>
+
+    <style>
+        kbd {
+            border: solid 1px rgb(233, 7, 7);
+        }
+
+        pre {
+            blackground-color
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Recursos especiais </h1>
+
+    <input list="browsers" type="search" name="search" />
+    <datalist id="browsers">
+        <option> Google Chrome</option>
+        <option>Edge</option>
+        < <option> Opera</option>
+    </datalist>
+    <hr>
+    <select name="browsers">
+        <option value=""> Selecione um navegador</option>
+        <option value="chrome"> Google Chrome</option>
+        <option value="edge"> Edje</option>
+        < <option value="opera"> Opera</option>
+    </select>
+
+    <hr>
+    <p> Para copiar esta informação, pressione <kbd>CTRL</kbd> + <kbd> C</kbd></p>
+
+    <p> PAra trocar o fundo de um elemento, utilize o comando <code>background-color</code> </p>
+    <hr>
+
+    <meter> max="100" min="0" value="500"</meter>
+
+    <hr>
+    <progress id="progress" max="100" min="0"></progress>
+
+    <script>
+        var progress = document.getElementById('progress');
+        const interval = setInterval(() => {
+            progress.value += 10;
+            if (progress.value >= 100) {
+                alert('carregamento realizado com sucesso')
+                clearInterval(interval);
+            }
+        }, 1000)
+
+    </script>
+
+
+</body>
+
+</html>
